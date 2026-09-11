@@ -1,6 +1,6 @@
 // 網站層級設定（JS 檔以便 astro.config.mjs 直接 import）
-// TODO：正式網域尚未確認。上線前請將 SITE_URL 改為實際網址（影響 canonical / sitemap / Open Graph）。
-export const SITE_URL = process.env.SITE_URL || 'https://www.drchenghao.tw';
+// 正式網域；canonical、sitemap 與 Open Graph 共用此設定。
+export const SITE_URL = process.env.SITE_URL || 'https://drhaohao.com';
 export const SITE_NAME = '程皓醫師｜運動醫學・疼痛治療・體重管理';
 export const SITE_SHORT_NAME = '程皓醫師';
 export const DEFAULT_DESCRIPTION =
@@ -25,3 +25,4 @@ export const MEDICAL_VISUALS = {
   section: 'after',
   galleryIndexable: false,
 };
+
