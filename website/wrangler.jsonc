@@ -1,0 +1,8 @@
+{
+  "$schema": "../../.tools/wrangler/node_modules/wrangler/config-schema.json",
+  "name": "drhaohao",
+  "account_id": "ee6be0ecddebe73d6d96b1aeb9caaddf",
+  "compatibility_date": "2026-09-11",
+  "assets": { "directory": "./dist", "not_found_handling": "404-page" },
+  "routes": [{ "pattern": "drhaohao.com", "custom_domain": true }]
+}
