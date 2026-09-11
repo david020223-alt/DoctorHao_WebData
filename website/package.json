@@ -5,10 +5,10 @@
   "type": "module",
   "description": "程皓醫師個人專業網站（聯新國際醫院 運動醫學科）",
   "scripts": {
-    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
-    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
-    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
-    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "dev": "node scripts/astro.mjs dev",
+    "build": "node scripts/astro.mjs build",
+    "preview": "node scripts/astro.mjs preview",
+    "check": "node scripts/astro.mjs check",
     "import-assets": "node scripts/import-assets.mjs"
   },
   "dependencies": {
@@ -27,3 +27,4 @@
     "typescript": "^6.0.3"
   }
 }
+
