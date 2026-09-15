@@ -1,6 +1,7 @@
 ---
 import Icon from './Icon.astro';
 import BrandLogo from './BrandLogo.astro';
+import VisitorCounter from './VisitorCounter.astro';
 import { doctor } from '@/data/doctor';
 import { clinics, lastConfirmed } from '@/data/clinics';
 import { footerNav } from '@/data/nav';
@@ -78,6 +79,7 @@ const footerBg = await decorBackground('footerFlow', 1600);
         © {year} 程皓醫師。本網站內容為一般醫療衛教資訊，不能取代實際診察；治療方式會依個別狀況有所不同，是否適合仍需經醫師評估。
       </p>
       <p class="footer-bottom__meta">門診資訊最後確認：{lastConfirmed}。如有異動以院方公告為準。</p>
+      {Astro.url.pathname === '/' && <VisitorCounter />}
     </div>
   </div>
 </footer>

@@ -1,51 +1,16 @@
-<section class="visitors" aria-label="網站瀏覽人次">
-  <div class="container visitors__inner">
-    <p class="visitors__label">網站瀏覽人次</p>
-    <p class="visitors__total" aria-live="polite" aria-atomic="true">
-      <span data-visit-total>—</span><span class="visitors__unit">次</span>
-    </p>
-    <p class="visitors__note" data-visit-since>感謝您的來訪</p>
-  </div>
-</section>
+<p class="visitors" aria-live="polite" aria-atomic="true">
+  網站瀏覽人次：<span data-visit-total>—</span> 次
+</p>
 
 <style>
   .visitors {
-    padding-block: var(--sp-8);
-    background: var(--c-surface);
-    border-top: 1px solid var(--c-line);
-    text-align: center;
-  }
-  .visitors__inner {
-    display: grid;
-    justify-items: center;
-    gap: var(--sp-2);
-  }
-  .visitors p {
     margin: 0;
-  }
-  .visitors__label {
-    color: var(--c-muted);
-    font-size: var(--fs-sm);
-    font-weight: 500;
-    letter-spacing: 0.08em;
-  }
-  .visitors__total {
-    display: flex;
-    align-items: baseline;
-    gap: var(--sp-2);
-    color: var(--c-brand-700);
-    font-size: clamp(2rem, 5vw, 2.75rem);
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
-    line-height: 1.25;
-  }
-  .visitors__unit {
-    color: var(--c-muted);
-    font-size: var(--fs-sm);
+    color: inherit;
+    font-size: inherit;
     font-weight: 400;
+    line-height: inherit;
   }
-  .visitors__note {
-    color: var(--c-muted);
-    font-size: var(--fs-xs);
+  .visitors span {
+    font-variant-numeric: tabular-nums;
   }
 </style>
