@@ -132,7 +132,7 @@ const categoryTiles = await Promise.all(
           </div>
           <div>
             <dt>專科／證照</dt>
-            <dd>家庭醫學科專科醫師；美國運動醫學會私人教練 ACSM-CPT</dd>
+            <dd>{doctor.credentials.map((credential) => credential.title).join('；')}</dd>
           </div>
           <div>
             <dt>運動醫學經歷</dt>
