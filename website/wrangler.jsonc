@@ -3,6 +3,16 @@
   "name": "drhaohao",
   "account_id": "ee6be0ecddebe73d6d96b1aeb9caaddf",
   "compatibility_date": "2026-09-11",
-  "assets": { "directory": "./dist", "not_found_handling": "404-page" },
+  "main": "./worker/index.js",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/visits"]
+  },
+  "durable_objects": {
+    "bindings": [{ "name": "VISIT_COUNTER", "class_name": "VisitCounter" }]
+  },
+  "migrations": [{ "tag": "visits-v1", "new_sqlite_classes": ["VisitCounter"] }],
   "routes": [{ "pattern": "drhaohao.com", "custom_domain": true }]
 }

@@ -57,13 +57,23 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
     <div class="site-header__actions">
       <a
         href={facebookLink.href}
-        class="fb-link"
+        class="social-link fb-link"
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`${facebookLink.label}（另開新視窗）`}
         title={facebookLink.label}
       >
         <Icon name="facebook" class="icon" />
+      </a>
+      <a
+        href={doctor.social.threads.url}
+        class="social-link threads-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Threads ${doctor.social.threads.handle}（另開新視窗）`}
+        title={`Threads ${doctor.social.threads.handle}`}
+      >
+        <Icon name="threads" class="icon" />
       </a>
       <a href={clinicCta.href} class="btn btn--sm header-cta" aria-current={isActive(clinicCta.href) ? 'page' : undefined}>
         <Icon name="calendar" class="icon" />
@@ -109,6 +119,10 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
         <a href={facebookLink.href} class="btn btn--secondary btn--block" target="_blank" rel="noopener noreferrer">
           <Icon name="facebook" class="icon" />
           {facebookLink.label}
+        </a>
+        <a href={doctor.social.threads.url} class="btn btn--secondary btn--block" target="_blank" rel="noopener noreferrer">
+          <Icon name="threads" class="icon" />
+          Threads {doctor.social.threads.handle}
         </a>
       </div>
     </nav>
@@ -268,21 +282,24 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
     gap: var(--sp-2);
     flex: none;
   }
-  .fb-link {
-    display: none;
+  .social-link {
+    display: grid;
     width: 40px;
-    height: 40px;
+    height: 44px;
     place-items: center;
     border-radius: var(--r-sm);
     color: var(--c-muted);
   }
-  .fb-link :global(.icon) {
+  .social-link :global(.icon) {
     width: 22px;
     height: 22px;
   }
-  .fb-link:hover {
+  .social-link:hover {
     background: var(--c-surface);
     color: var(--c-brand-700);
+  }
+  .fb-link {
+    display: none;
   }
   .header-cta {
     display: none;
@@ -355,6 +372,24 @@ const isActive = (href: string) => (href === '/' ? current === '/' : current.sta
     display: grid;
     gap: var(--sp-3);
     padding-top: var(--sp-2);
+  }
+
+  @media (max-width: 380px) {
+    .site-header__inner {
+      gap: var(--sp-2);
+    }
+    .site-header__actions {
+      gap: var(--sp-1);
+    }
+    .threads-link {
+      width: 36px;
+    }
+  }
+
+  @media (max-width: 340px) {
+    .brand :global(.brand-logo) {
+      width: 176px;
+    }
   }
 
   @media (min-width: 1200px) {

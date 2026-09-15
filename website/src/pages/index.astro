@@ -7,6 +7,7 @@ import TreatmentCard from '@/components/TreatmentCard.astro';
 import TopicGrid from '@/components/TopicGrid.astro';
 import ArticleCard from '@/components/ArticleCard.astro';
 import ClinicSection from '@/components/ClinicSection.astro';
+import VisitorCounter from '@/components/VisitorCounter.astro';
 import { doctor } from '@/data/doctor';
 import { treatments } from '@/data/treatments';
 import { categoryList } from '@/data/categories';
@@ -185,6 +186,7 @@ const categoryTiles = await Promise.all(
 
   <!-- Section 6: 門診 -->
   <ClinicSection surface={false} />
+  <VisitorCounter />
 </BaseLayout>
 
 <style>

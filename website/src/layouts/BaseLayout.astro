@@ -99,7 +99,7 @@ const ld = [...baseJsonLd, ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd
 
     <script is:inline type="application/ld+json" set:html={JSON.stringify(ld)} />
   </head>
-  <body class:list={[bodyClass, { 'has-mobile-cta': mobileCta }]}>
+  <body class:list={[bodyClass, { 'has-mobile-cta': mobileCta }]} data-count-visits={!noindex ? '' : undefined}>
     <a href="#main" class="skip-link">跳到主要內容</a>
     <Header />
     <main id="main" tabindex="-1">
@@ -107,6 +107,9 @@ const ld = [...baseJsonLd, ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd
     </main>
     <Footer />
     {mobileCta && <MobileCtaBar />}
+    <script>
+      import '@/scripts/visits';
+    </script>
   </body>
 </html>
 

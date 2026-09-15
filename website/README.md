@@ -1,6 +1,6 @@
 # 程皓醫師個人專業網站
 
-聯新國際醫院運動醫學科 程皓醫師的個人專業網站。以 [Astro 7](https://astro.build) 建置的靜態網站：SEO 友善、零 JS 為主（僅選單互動）、內建圖片最佳化與 sitemap。
+聯新國際醫院運動醫學科 程皓醫師的個人專業網站。以 [Astro 7](https://astro.build) 建置，以靜態頁面為主，搭配選單互動與瀏覽人次計數，內建圖片最佳化與 sitemap。
 
 > 內容原則：只使用本機素材中可查證的資料；治療頁為一般衛教資訊並明確標示需經醫師評估；缺漏資料以 TODO 標示（見 `docs/05-todo-for-owner.md`），不自行捏造。
 
@@ -25,7 +25,17 @@ npm run build        # 輸出至 website/dist/（純靜態檔案）
 npm run preview      # 本機預覽 dist
 ```
 
-`dist/` 可直接部署到任何靜態主機（Cloudflare Pages、Netlify、Vercel、GitHub Pages、S3、Nginx…）。
+`dist/` 是靜態頁面；正式站的瀏覽人次由 Cloudflare Worker 與 SQLite Durable Object 提供，需連同 `worker/index.js`、`wrangler.jsonc` 一起部署。
+
+### 瀏覽人次與 Cloudflare 部署
+
+先執行 `npm run build`，再從工作區根目錄執行 `wrangler.cmd deploy --config DoctorHao_WebData/website/wrangler.jsonc`（或在本資料夾使用已安裝的 `wrangler deploy`）。
+
+本機完整預覽使用 `wrangler dev --local --port 8787`。一般 Astro 預覽不包含計數 API。計數器以功能上線後全站可見頁面的載入次數累計，包含重新載入；不是不重複訪客統計。不儲存 IP、訪客識別碼或瀏覽路徑。已知爬蟲與 noindex 頁面不計入。
+
+儲存使用 Workers Free 支援的 SQLite Durable Object，超過免費上限時計數服務可能暫停，靜態頁面仍由資產服務供應。不要刪除／改名 `VisitCounter` 類別、`website` 實例名稱或既有 migration，避免遺失累計資料。
+
+啟動本機 Worker 後，可執行 `node scripts/check-counter.mjs` 驗證累加、並行請求與跨站拒絕。此檢查只允許本機網址，不會增加正式站數字。
 
 上線前請設定正式網域：修改 `src/data/site.js` 的 `SITE_URL`（或以環境變數 `SITE_URL=https://... npm run build`）。canonical、Open Graph、sitemap、robots.txt 皆依此產生。
 
