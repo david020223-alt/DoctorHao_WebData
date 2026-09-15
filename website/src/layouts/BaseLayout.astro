@@ -1,13 +1,12 @@
 ---
 import '@fontsource-variable/noto-sans-tc';
 import '@/styles/global.css';
-import { getImage } from 'astro:assets';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import MobileCtaBar from '@/components/MobileCtaBar.astro';
 import { SITE_NAME, SITE_SHORT_NAME, DEFAULT_DESCRIPTION, LOCALE, DESIGN_VERSION } from '@/data/site.js';
 import { doctor } from '@/data/doctor';
-import portrait from '@/assets/photos/doctor-portrait-studio.jpg';
+import logo from '@/assets/drhaohao-logo.png';
 
 export interface Props {
   title: string;
@@ -43,8 +42,12 @@ const {
 const fullTitle = rawTitle ? title : `${title}｜${SITE_SHORT_NAME}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 
-const defaultOg = await getImage({ src: portrait, width: 1200, height: 630, fit: 'cover', position: 'top', format: 'jpg' });
-const og = ogImage ?? { src: defaultOg.src, width: 1200, height: 630, alt: `${doctor.displayName}` };
+const og = ogImage ?? {
+  src: logo.src,
+  width: logo.width,
+  height: logo.height,
+  alt: '程皓醫師 LOGO｜運動醫學・疼痛治療・體重管理',
+};
 const ogUrl = new URL(og.src, Astro.site).toString();
 
 const baseJsonLd = [
@@ -92,6 +95,7 @@ const ld = [...baseJsonLd, ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogUrl} />
+    {og.alt && <meta name="twitter:image:alt" content={og.alt} />}
 
     <script is:inline type="application/ld+json" set:html={JSON.stringify(ld)} />
   </head>
