@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import logo from '@/assets/drhaohao-logo.png';
+
+interface Props {
+  footer?: boolean;
+}
+const { footer = false } = Astro.props;
+---
+
+<span class:list={['brand-logo', { 'brand-logo--footer': footer }]}>
+  <Image
+    src={logo}
+    alt="程皓醫師｜運動醫學・疼痛治療・體重管理"
+    width={800}
+    format="webp"
+    quality={95}
+    layout="none"
+    loading={footer ? 'lazy' : 'eager'}
+    class="brand-logo__image"
+  />
+</span>
+
+<style>
+  /* Frame the supplied artwork without changing its proportions or source. */
+  .brand-logo {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 216px;
+    aspect-ratio: 1440 / 490;
+    background: #fff;
+    flex: none;
+  }
+  .brand-logo :global(.brand-logo__image) {
+    position: absolute;
+    width: 134.861111%;
+    max-width: none;
+    height: auto;
+    left: -17.361111%;
+    top: -29.591837%;
+  }
+  .brand-logo--footer {
+    width: 260px;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  @media (max-width: 380px) {
+    .brand-logo:not(.brand-logo--footer) {
+      width: 196px;
+    }
+  }
+</style>

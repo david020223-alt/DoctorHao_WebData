@@ -2,6 +2,11 @@
 
 版本規則見 `docs/06-design-versions.md`。每個版本對應 git tag `design-vX.Y.Z`。
 
+## design-v1.4.0 — 2026-09-15
+
+- 全站頁首與頁尾採用使用者提供的籃球投籃剪影 Logo，保留原圖文字、色彩與比例。
+- Logo 由共用元件顯示，調整留白、頁首高度與手機／桌機選單切換寬度。
+
 ## design-v1.3.0 — 2026-09-10
 
 **主題：64 張 AI 生成編輯插畫上線（依 `design/image-production/` 規格，由另一個 AI 以 xAI Imagine 產生並放入 `src/assets/generated/`）。**

@@ -86,7 +86,7 @@
   --container: 1200px;
   --container-narrow: 860px;
   --measure: 44em;
-  --header-h: 68px;
+  --header-h: 88px;
 
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   --dur: 160ms;
