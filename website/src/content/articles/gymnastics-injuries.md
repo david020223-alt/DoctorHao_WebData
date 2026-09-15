@@ -47,8 +47,8 @@ sources:
 因不同體操項目的動作需求不同，容易導致不同的運動傷害。特別的是，上肢（鞍馬、跳馬、單槓與雙槓）也承接了很大的體重負荷——動態動力學分析顯示，**上肢承受的瞬間力量可高達體重的 16 倍以上**，因此手腕、肘與肩膀的上肢傷害機率也非常高。
 
 <figure class="figure">
-  <img src="/medical/gymnast-wrist-growth-plate-3d.svg" alt="概念示意圖：體操選手手腕承重與遠端橈骨生長板位置，列出常需留意的區域——生長板過度使用、TFCC 與尺側手腕疼痛、舟狀骨壓力性傷害、關節囊與肌腱問題" width="1600" height="1000" loading="lazy" />
-  <figcaption>體操選手手腕：承重與生長板壓力（概念示意圖）。</figcaption>
+  <img src="/medical-2d/inline/gymnast-wrist-growth-plate.svg" alt="2D 示意圖，文字說明見圖下附註。" width="600" height="440" loading="lazy" />
+  <figcaption>2D 示意圖｜手腕以橈骨、尺骨與腕部結構承受負荷；成長中的運動員如有持續疼痛，應評估生長板與其他組織。</figcaption>
 </figure>
 
 ## 各部位常見傷害類型

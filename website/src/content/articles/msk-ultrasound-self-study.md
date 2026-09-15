@@ -26,21 +26,21 @@ sources:
 > 目前依然還在努力精進的階段，期待未來能與超音波同好們一起持續學習！
 
 <figure class="figure">
-  <img src="/medical/msk-ultrasound-guidance-3d.svg" alt="概念示意圖：骨骼肌肉超音波導引注射——探頭下可見目標組織、需避開的神經與血管，針尖全程保持可視；並列出超音波導引三要點：辨識解剖層次、規劃安全進針路徑、全程確認針尖位置" width="1600" height="1000" loading="lazy" />
-  <figcaption>超音波導引注射的概念示意（非操作教學，侵入性治療須由醫療專業人員執行）。</figcaption>
+  <img src="/medical-2d/inline/msk-ultrasound-guidance.svg" alt="2D 示意圖，文字說明見圖下附註。" width="600" height="440" loading="lazy" />
+  <figcaption>2D 示意圖｜探頭與組織層次的 2D 概念示意。導引注射需辨識目標與神經血管、確認針尖位置；此圖不是操作路徑或操作教學。</figcaption>
 </figure>
 
 <!-- ultrasound-atlas:start -->
-## 肩／肘／腕／髖／膝／踝：立體解剖與探頭位置
+## 肩／肘／腕／髖／膝／踝：2D 定位重點
 
 > AI 輔助製作的概念性教學素材，尚待程皓醫師審閱；不是患者影像、標準化完整檢查流程或操作認證。
-> 每部位以一個代表性視窗呈現長、短軸；不是把一張圖當作完整的關節檢查。
+> 每部位以平面圖卡整理代表性的定位地標；圖下文字補充長、短軸的觀察重點，不代表完整的關節檢查。
 
-[開啟六部位 3D 圖解館與可旋轉模型](/ultrasound-atlas/)
+[瀏覽 2D 醫學圖解與文字附註](/medical-visuals/)
 
 ### 肩關節：肱二頭肌長頭肌腱・結節間溝
 
-<figure><a href="/medical-visuals/ultrasound/shoulder-anatomy-probe.png"><picture><source srcset="/medical-visuals/ultrasound/shoulder-anatomy-probe.webp" type="image/webp" /><img src="/medical-visuals/ultrasound/shoulder-anatomy-probe.png" width="1800" height="1200" loading="lazy" decoding="async" alt="以結節間溝為骨性地標辨識肱二頭肌長頭肌腱；此圖不等於完整旋轉肌袖檢查。" /></picture></a><figcaption>以結節間溝為骨性地標辨識肱二頭肌長頭肌腱；此圖不等於完整旋轉肌袖檢查。</figcaption></figure>
+<figure><img src="/medical-2d/inline/ultrasound-shoulder.svg" width="600" height="440" loading="lazy" decoding="async" alt="肩部前側定位：以結節間溝辨識肱二頭肌長頭肌腱；需配合其他視窗，不能代表完整旋轉肌袖檢查。" /><figcaption>2D 定位概念圖｜肩部前側定位：以結節間溝辨識肱二頭肌長頭肌腱；需配合其他視窗，不能代表完整旋轉肌袖檢查。</figcaption></figure>
 
 **擺位概念：**坐姿，肘彎曲約 90°，掌心向上。前臂朝對側膝，肩採輕度內旋。
 
@@ -50,7 +50,7 @@ sources:
 
 ### 肘關節：外上髁・共同伸肌腱
 
-<figure><a href="/medical-visuals/ultrasound/elbow-anatomy-probe.png"><picture><source srcset="/medical-visuals/ultrasound/elbow-anatomy-probe.webp" type="image/webp" /><img src="/medical-visuals/ultrasound/elbow-anatomy-probe.png" width="1800" height="1200" loading="lazy" decoding="async" alt="外上髁是共同伸肌腱的近端骨性地標；本視窗不取代前、內、後側的適應症導向評估。" /></picture></a><figcaption>外上髁是共同伸肌腱的近端骨性地標；本視窗不取代前、內、後側的適應症導向評估。</figcaption></figure>
+<figure><img src="/medical-2d/inline/ultrasound-elbow.svg" width="600" height="440" loading="lazy" decoding="async" alt="肘部外側定位：由肱骨外上髁對照共同伸肌腱，其他視窗依適應症評估。" /><figcaption>2D 定位概念圖｜肘部外側定位：由肱骨外上髁對照共同伸肌腱，其他視窗依適應症評估。</figcaption></figure>
 
 **擺位概念：**坐姿，上肢有支撐，拇指朝上。肘可伸直或採舒適屈曲位，露出外側。
 
@@ -60,7 +60,7 @@ sources:
 
 ### 腕關節：近端腕隧道・正中神經
 
-<figure><a href="/medical-visuals/ultrasound/wrist-anatomy-probe.png"><picture><source srcset="/medical-visuals/ultrasound/wrist-anatomy-probe.webp" type="image/webp" /><img src="/medical-visuals/ultrasound/wrist-anatomy-probe.png" width="1800" height="1200" loading="lazy" decoding="async" alt="模型分別保留四條淺指屈肌腱、四條深指屈肌腱及一條拇長屈肌腱；支持帶透明化僅為顯示層次。" /></picture></a><figcaption>模型分別保留四條淺指屈肌腱、四條深指屈肌腱及一條拇長屈肌腱；支持帶透明化僅為顯示層次。</figcaption></figure>
+<figure><img src="/medical-2d/inline/ultrasound-wrist.svg" width="600" height="440" loading="lazy" decoding="async" alt="腕部掌側層次：屈肌支持帶深層為腕隧道，內有正中神經與屈肌腱；圖中僅列定位重點。" /><figcaption>2D 定位概念圖｜腕部掌側層次：屈肌支持帶深層為腕隧道，內有正中神經與屈肌腱；圖中僅列定位重點。</figcaption></figure>
 
 **擺位概念：**前臂旋後、掌心向上，手背有支撐。手腕放鬆，避免過度伸展或重壓。
 
@@ -70,7 +70,7 @@ sources:
 
 ### 髖關節：前方關節隱窩・股骨頭頸
 
-<figure><a href="/medical-visuals/ultrasound/hip-anatomy-probe.png"><picture><source srcset="/medical-visuals/ultrasound/hip-anatomy-probe.webp" type="image/webp" /><img src="/medical-visuals/ultrasound/hip-anatomy-probe.png" width="1800" height="1200" loading="lazy" decoding="async" alt="成人前髖示意；斜長軸以股骨頭、股骨頸定位。不是嬰兒髖發育評估，也不能據此排除盂唇病變。" /></picture></a><figcaption>成人前髖示意；斜長軸以股骨頭、股骨頸定位。不是嬰兒髖發育評估，也不能據此排除盂唇病變。</figcaption></figure>
+<figure><img src="/medical-2d/inline/ultrasound-hip.svg" width="600" height="440" loading="lazy" decoding="async" alt="成人前髖斜長軸以股骨頭、股骨頸定位；不是嬰兒髖發育評估，也不能據此排除盂唇病變。" /><figcaption>2D 定位概念圖｜成人前髖斜長軸以股骨頭、股骨頸定位；不是嬰兒髖發育評估，也不能據此排除盂唇病變。</figcaption></figure>
 
 **擺位概念：**成人仰躺，以下肢舒適姿勢檢查。較深部位依穿透需求選擇較低頻探頭。
 
@@ -80,7 +80,7 @@ sources:
 
 ### 膝關節：髕骨下極・髕腱・脛骨粗隆
 
-<figure><a href="/medical-visuals/ultrasound/knee-anatomy-probe.png"><picture><source srcset="/medical-visuals/ultrasound/knee-anatomy-probe.webp" type="image/webp" /><img src="/medical-visuals/ultrasound/knee-anatomy-probe.png" width="1800" height="1200" loading="lazy" decoding="async" alt="以髕腱為主要示範，髕骨未移開；骨形、軟組織厚度與間隙均為概念比例，不能量測或判讀病變。" /></picture></a><figcaption>以髕腱為主要示範，髕骨未移開；骨形、軟組織厚度與間隙均為概念比例，不能量測或判讀病變。</figcaption></figure>
+<figure><img src="/medical-2d/inline/ultrasound-knee.svg" width="600" height="440" loading="lazy" decoding="async" alt="膝前側沿髕骨下極、髕腱至脛骨粗隆觀察；圖中僅列定位重點，不供量測或判讀病變。" /><figcaption>2D 定位概念圖｜膝前側沿髕骨下極、髕腱至脛骨粗隆觀察；圖中僅列定位重點，不供量測或判讀病變。</figcaption></figure>
 
 **擺位概念：**仰躺，膝下墊枕，微屈約 20–30°。依舒適度與檢查目的調整支撐。
 
@@ -90,7 +90,7 @@ sources:
 
 ### 踝關節：阿基里斯腱・跟骨附著處
 
-<figure><a href="/medical-visuals/ultrasound/ankle-anatomy-probe.png"><picture><source srcset="/medical-visuals/ultrasound/ankle-anatomy-probe.webp" type="image/webp" /><img src="/medical-visuals/ultrasound/ankle-anatomy-probe.png" width="1800" height="1200" loading="lazy" decoding="async" alt="主模型為後外側概念視角，足部姿勢不是病人擺位指令；示範肌腱連續走向，不呈現合成超音波影像。" /></picture></a><figcaption>主模型為後外側概念視角，足部姿勢不是病人擺位指令；示範肌腱連續走向，不呈現合成超音波影像。</figcaption></figure>
+<figure><img src="/medical-2d/inline/ultrasound-ankle.svg" width="600" height="440" loading="lazy" decoding="async" alt="依肌腱所在區域與連續走向定位：後側阿基里斯腱、內側脛後肌腱、外側腓骨肌腱。" /><figcaption>2D 定位概念圖｜依肌腱所在區域與連續走向定位：後側阿基里斯腱、內側脛後肌腱、外側腓骨肌腱。</figcaption></figure>
 
 **擺位概念：**俯臥，小腿有支撐，足部伸出床緣。以舒適範圍調整足部，避免強迫背屈。
 
@@ -100,11 +100,11 @@ sources:
 
 ### 使用範圍與來源
 
-圖像與模型採簡化的成人解剖，沒有個案資料，也沒有合成 B 模式影像。探頭長邊、切面及標記只示意相對方向；正式檢查仍需由受訓人員依病史、理學檢查、設備設定與適應症完成，不能依本圖自行診斷或施作注射。
+2D 圖卡整理成人肌骨超音波的定位重點，沒有個案資料，也沒有合成 B 模式影像。圖卡不呈現實際探頭角度、切面或量測比例；正式檢查仍需由受訓人員依病史、理學檢查、設備設定與適應症完成，不能依本圖自行診斷或施作注射。
 
 跨部位原則參考 [AIUM 2023 肌肉骨骼超音波 Practice Parameter](https://doi.org/10.1002/jum.16228)。ESSR 文件為既有技術指引，本系列沒有宣稱其為 2026 年新發布版本。
 
-素材新增日期：2026-09-10。醫學審閱：**尚未完成**。
+2D 圖卡更新日期：2026-09-16。醫學審閱：**尚未完成**。
 <!-- ultrasound-atlas:end -->
 
 ## 影片資源

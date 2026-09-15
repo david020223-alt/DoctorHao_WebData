@@ -24,8 +24,8 @@ sources:
 關於 SRC 的識別、診斷與處置，共有關鍵的 11 個 R：Recognise、Remove、Re-evaluate、Rest、Rehabilitation、Refer、Recover、Return to sport、Reconsider、Residual effects and sequelae、Risk reduction。以下討論前四項。
 
 <figure class="figure">
-  <img src="/medical/sport-concussion-pathway-3d.svg" alt="示意圖：運動性腦震盪場邊流程——Recognise 辨識、Remove 疑似腦震盪立即停止參賽、Re-evaluate 完整神經學與認知評估、Relative rest 短暫休息後漸進增加活動；當天確診者不得回場，並列出需立即升級處置的警訊" width="1600" height="1000" loading="lazy" />
-  <figcaption>運動性腦震盪：辨識、退場、再評估、恢復（衛教示意圖，診斷以臨床綜合評估為核心）。</figcaption>
+  <img src="/medical-2d/inline/sport-concussion-pathway.svg" alt="2D 示意圖，文字說明見圖下附註。" width="600" height="440" loading="lazy" />
+  <figcaption>2D 示意圖｜疑似腦震盪應辨識症狀、立即退場並接受醫療評估；恢復活動需依症狀與專業判斷逐步安排。</figcaption>
 </figure>
 
 ## Recognise & Remove：辨識與移除

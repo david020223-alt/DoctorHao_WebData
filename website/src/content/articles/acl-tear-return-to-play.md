@@ -50,8 +50,8 @@ sources:
 造成前十字韌帶最大承重的動作包含：**膝關節過度伸直**，以及**膝外翻外轉**（股骨內轉合併脛骨外轉）。在膝過度伸直的情況下，若同時單腳落地並合併其他外力，就可能造成巨大傷害。
 
 <figure class="figure">
-  <img src="/medical/knee-acl-hyperextension-3d.svg" alt="概念示意圖：膝關節過度伸直時前十字韌帶承受較大負荷；右下標示較佳落地策略——髖、膝微彎、肌肉主動減速，避免直膝單腳硬著地" width="1600" height="1000" loading="lazy" />
-  <figcaption>膝關節過度伸直與前十字韌帶受力（概念示意圖，非診斷影像）。</figcaption>
+  <img src="/medical-2d/inline/knee-acl-hyperextension.svg" alt="2D 示意圖，文字說明見圖下附註。" width="600" height="440" loading="lazy" />
+  <figcaption>2D 示意圖｜前十字韌帶連接股骨與脛骨，參與膝關節穩定；圖中省略部分構造以利觀看。</figcaption>
 </figure>
 
 ### 直膝單腳落地為什麼危險？
@@ -61,8 +61,8 @@ sources:
 **最好的落地姿勢**是保持膝關節與髖關節微彎，讓股四頭肌、臀大肌及腿後肌協助減速並吸收力道。（此段引自運動視界文章，程皓醫師於原文中引用。）
 
 <figure class="figure">
-  <img src="/medical/landing-mechanics-3d.svg" alt="概念示意圖：直膝落地（高風險模式，地面反作用力較集中）與髖膝屈曲吸震（較佳模式，臀肌、股四頭肌、腿後肌協助減速）的比較" width="1600" height="1000" loading="lazy" />
-  <figcaption>落地機制：直膝 vs. 髖膝屈曲吸震（概念示意圖）。</figcaption>
+  <img src="/medical-2d/inline/landing-mechanics.svg" alt="2D 示意圖，文字說明見圖下附註。" width="600" height="440" loading="lazy" />
+  <figcaption>2D 示意圖｜落地時髖與膝需協調控制，避免直膝硬著地；此圖僅表示關節協調概念，不是標準角度或個人訓練處方。</figcaption>
 </figure>
 
 ### 該練什麼？

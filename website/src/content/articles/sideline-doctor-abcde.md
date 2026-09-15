@@ -31,8 +31,8 @@ sources:
 - **E**valuation / Extremities：露身檢查及環境控制
 
 <figure class="figure">
-  <img src="/medical/sideline-abcde-3d.svg" alt="示意圖：場邊急性傷害 ABCDE 初步評估——Airway 呼吸道與頸椎保護、Breathing 呼吸與換氣、Circulation 循環與出血控制、Disability 意識與神經學評估、Exposure/Extremities 露身檢查與肢體評估" width="1600" height="1000" loading="lazy" />
-  <figcaption>場邊急性傷害 ABCDE 初步評估（衛教示意圖）。</figcaption>
+  <img src="/medical-2d/inline/sideline-abcde.svg" alt="2D 示意圖，文字說明見圖下附註。" width="600" height="440" loading="lazy" />
+  <figcaption>2D 示意圖｜場邊評估先處理危急狀況；ABCDE 分別關注呼吸道、呼吸、循環、神經狀態及露身／肢體評估。</figcaption>
 </figure>
 
 ## 第二步：評估肢體

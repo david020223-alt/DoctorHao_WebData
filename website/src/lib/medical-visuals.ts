@@ -12,5 +12,10 @@ interface Registry {
   sources: Record<string, {label: string; url: string; checkedOn: string}>;
 }
 export const medicalVisuals = raw as unknown as Registry;
+// Preserve the source briefs while adapting model-specific wording for flat diagrams.
+for (const visual of Object.values(medicalVisuals.articles)) {
+  visual.caution = visual.caution.replaceAll('模型', '圖解').replaceAll('人偶', '動作');
+  visual.points = visual.points.map(p => ({ ...p, text: p.text.replaceAll('模型', '圖解').replace('圖中部分結構移開', '圖中省略部分結構') }));
+}
 /** New/unmapped articles keep the existing CategoryCover; never guess a medical illustration. */
 export const getMedicalVisual = (slug: string): MedicalVisual | undefined => medicalVisuals.articles[slug];
