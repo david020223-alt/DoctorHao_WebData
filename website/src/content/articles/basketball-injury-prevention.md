@@ -4,13 +4,27 @@ description: 程皓醫師每週打籃球，也提醒籃球是具高度運動傷�
 category: sports-injury
 tags: [sports-injury, ankle-foot, knee]
 pubDate: 2026-06-15
-updatedDate: 2026-09-09
+updatedDate: 2026-09-23
+featured: true
 sources:
+  - platform: Threads
+    date: 2026-06-15
+    url: https://www.threads.com/@drchenghao/post/DZmmIzpkw9_
+    note: 籃球運動傷害系列主文
+  - platform: Threads
+    date: 2026-06-15
+    url: https://www.threads.com/@drchenghao/post/DZmmIyvk8P8
+    note: 下肢傷害、反覆翻船與預防重點
+  - platform: Threads
+    date: 2026-03-28
+    url: https://www.threads.com/@drchenghao/post/DWbAZHFE89s
+    note: 打法、運動量、肌力、體重與球友安全
   - platform: Facebook
     date: 2026-06-15
     note: 「身為運動醫學科醫師，我想說，籃球是超級有趣的競技型運動」
   - platform: Threads
     date: 2025-11-11
+    url: https://www.threads.com/@drchenghao/post/DQ6ODRqE00m
     note: 「門診時常有朋友各種籃羽球運動傷害來看診」
 ---
 
@@ -26,7 +40,21 @@ sources:
 
 ## 比賽比訓練更危險
 
-數據顯示，比賽時的傷害發生率明顯高於訓練，禁區附近的身體衝撞更是主要原因。這不是叫你不要拼，而是要有正確的身體對抗觀念，並記得保護自己。
+程皓醫師在原貼文提醒，比賽中的強度與身體接觸，是需要留意的風險。不同層級、年齡與研究的傷害比例不完全相同；重點是看見變向、跳躍、落地與碰撞時的風險，並記得保護自己。
+
+## 不只熱身：打球的量與球友也很重要
+
+在 2026 年 3 月的另一則 Threads 貼文中，程皓醫師補充了五個面向：
+
+| 面向 | 打球時的提醒 |
+|---|---|
+| 打法 | 全力衝刺、跳躍與大幅變向，需要相應的體能與控制能力 |
+| 運動量 | 疲勞時調整強度與場次，不勉強維持原本表現 |
+| 肌力 | 平時規律訓練，幫助支撐關節與控制動作 |
+| 體重與功能 | 一起考量下肢負荷與活動能力，不只追求體重數字 |
+| 球友與規則 | 避免危險碰撞與不必要的強硬動作，尊重彼此安全 |
+
+這些做法是降低風險的方向，不保證任何打法都不會受傷。
 
 ## 醫師建議的預防重點
 
@@ -41,11 +69,17 @@ sources:
 
 所以當有朋友問「醫生，你也打球嗎？」他都回：「我打，我也要讓你繼續打下去！」
 
+## 不痛了，就能直接回場嗎？
+
+不痛與能承受比賽，是不同的階段。傷後應逐步確認關節活動、肌力與平衡，再練習籃球需要的移動、變向及落地；若反覆翻船、腫脹或覺得關節不穩，應重新評估，不能只用固定休息天數判定回場。
+
+**補充參考：**[AAOS 籃球傷害預防](https://www.orthoinfo.org/staying-healthy/basketball-injury-prevention)提醒維持體能、充分暖身與安全回場；這些建議是配合原 Threads 內容加入的衛教補充。
+
 ## 重點整理
 
 - 籃球傷害以下肢為主，踝關節扭傷第一、膝部第二。
 - 反覆翻船會造成慢性踝不穩定，不是休息幾天就好。
-- 比賽比訓練危險，禁區衝撞是主因。
+- 比賽強度、疲勞、身體接觸與場上安全，都需要考量。
 - 預防：確實熱身、動態伸展、傷後循序回場、肌力訓練。
 
 延伸閱讀：[跑者膝與髕骨帶](/articles/runners-knee-and-patellar-strap/)、[肌力訓練是保養也是治療](/articles/strength-is-maintenance-and-treatment/)

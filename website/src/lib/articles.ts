@@ -19,7 +19,10 @@ export async function getArticlesByTags(tags: string[], limit?: number) {
 
 export async function getFeaturedArticles(limit = 6) {
   const all = await getPublishedArticles();
-  const featured = all.filter((a) => a.data.featured);
+  // 首頁優先展示近期更新的精選，保留原社群發文日期。
+  const featured = all.filter((a) => a.data.featured).sort((a, b) =>
+    b.data.updatedDate.getTime() - a.data.updatedDate.getTime() ||
+    b.data.pubDate.getTime() - a.data.pubDate.getTime());
   // 若精選不足，補上最新文章，並確保三個分類都有出現
   const picked: Article[] = [...featured];
   for (const a of all) {
