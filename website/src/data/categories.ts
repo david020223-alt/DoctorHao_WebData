@@ -1,4 +1,4 @@
-export type CategoryId = 'sports-injury' | 'weight-management' | 'training';
+export type CategoryId = 'sports-injury' | 'weight-management' | 'training' | 'hyperbaric-oxygen';
 
 export interface Category {
   id: CategoryId;
@@ -11,6 +11,14 @@ export interface Category {
 }
 
 export const categories: Record<CategoryId, Category> = {
+  'hyperbaric-oxygen': {
+    id: 'hyperbaric-oxygen',
+    name: '高壓氧治療',
+    shortName: '高壓氧治療',
+    description: '運動恢復、傷口修復、醫美相關治療、突發性聽力損失、腦傷與潛水減壓病的評估及治療觀念。',
+    path: '/articles/hyperbaric-oxygen/',
+    tone: 'teal',
+  },
   'sports-injury': {
     id: 'sports-injury',
     name: '運動傷害及疼痛',

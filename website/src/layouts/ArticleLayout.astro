@@ -121,7 +121,7 @@ const articleLd = {
 
       <Callout tone="neutral" icon="info" class="article__disclaimer">
         <p>
-          本文整理自程皓醫師公開發表的社群內容，經重新排版與潤飾以利閱讀；醫療觀點以原文為準。內容為一般衛教資訊，無法取代實際診察，治療方式會依個別情況有所不同。
+          {data.contentOrigin === 'social' && '本文整理自程皓醫師公開發表的社群內容，經重新排版與潤飾以利閱讀；醫療觀點以原文為準。'}內容為一般衛教資訊，無法取代實際診察，治療方式會依個別情況有所不同。
         </p>
       </Callout>
 
@@ -179,8 +179,8 @@ const articleLd = {
 
     <section class="section article__cta" aria-labelledby="cta-title">
       <div class="container container--narrow">
-        <h2 id="cta-title">有相關的疼痛或運動問題？</h2>
-        <p>文章內容無法取代診察。若有持續的症狀，歡迎於門診諮詢，程皓醫師會依您的狀況完整評估。</p>
+        <h2 id="cta-title">{data.category === 'hyperbaric-oxygen' ? '想了解高壓氧治療是否適合自己？' : '有相關的疼痛或運動問題？'}</h2>
+        <p>{data.category === 'hyperbaric-oxygen' ? '可於門診討論診斷、治療選項與轉介需求。突發聽力下降、急性腦傷或疑似減壓病，請及時就醫，不要等候一般門診。' : '文章內容無法取代診察。若有持續的症狀，歡迎於門診諮詢，程皓醫師會依您的狀況完整評估。'}</p>
         <div class="article__cta-actions">
           <a href="/clinic/" class="btn btn--lg"><Icon name="calendar" class="icon" />查看程皓醫師門診資訊</a>
           <a href={doctor.social.facebook.url} class="btn btn--secondary btn--lg" target="_blank" rel="noopener noreferrer"

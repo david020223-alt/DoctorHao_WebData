@@ -8,7 +8,8 @@ const articles = defineCollection({
     z.object({
       title: z.string(),
       description: z.string().max(200),
-      category: z.enum(['sports-injury', 'weight-management', 'training']),
+      category: z.enum(['sports-injury', 'weight-management', 'training', 'hyperbaric-oxygen']),
+      contentOrigin: z.enum(['social', 'original']).default('social'),
       tags: z.array(z.string()).default([]),
       /** 原始社群發布日期（若整理自多篇，取最早或最主要一篇） */
       pubDate: z.coerce.date(),
