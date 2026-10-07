@@ -9,7 +9,12 @@ export async function getPublishedArticles(): Promise<Article[]> {
 }
 
 export async function getArticlesByCategory(category: CategoryId) {
-  return (await getPublishedArticles()).filter((a) => a.data.category === category);
+  const list = (await getPublishedArticles()).filter((a) => a.data.category === category);
+  // Keep the introductory guide as the entry point, including after future articles are added.
+  if (category === 'hyperbaric-oxygen') {
+    return [...list.filter((a) => a.id === 'hbot-introduction'), ...list.filter((a) => a.id !== 'hbot-introduction')];
+  }
+  return list;
 }
 
 export async function getArticlesByTags(tags: string[], limit?: number) {

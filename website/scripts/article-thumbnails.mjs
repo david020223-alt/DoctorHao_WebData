@@ -1,4 +1,4 @@
-/** Original flat editorial artwork. Run with Node to rebuild the ten WebP covers. */
+/** Original flat editorial artwork. Run with Node to rebuild covers, optionally passing one slug. */
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -14,6 +14,7 @@ const text = (x, y, value, size = 26, fill = ink, weight = 500) => `<text x="${x
 const oxygen = () => c(1000, 164, 51, paper, ink, 4) + text(966, 179, 'O₂', 43, ink, 700);
 const human = () => c(829, 223, 26, ink) + p('M813 265 L785 330 L840 362 L865 427 M797 300 L878 303 L912 273 M787 331 L745 398 L690 417', 'none', ink, 23);
 const drawings = {
+  chamber: rect(661, 246, 382, 172, 78, light) + c(757, 332, 46, paper, ink, 6) + c(912, 332, 46, paper, ink, 6) + text(884, 347, 'O₂', 40, ink, 700) + rect(707, 424, 38, 28, 6, ink, 'none') + rect(960, 424, 38, 28, 6, ink, 'none') + c(852, 191, 42, paper, ink, 6) + p('M852 191 L872 171 M852 235 V245', 'none', ink, 6) + p('M686 475 H1020', 'none', gold, 5),
   glucose: rect(731, 166, 190, 294, 30) + rect(754, 208, 144, 111, 12, light, 'none') + p('M770 270 H794 L806 247 L824 291 L839 259 H881', 'none', ink, 6) + c(827, 394, 19, paper, ink, 5) + p('M1001 303 C1001 303 963 346 963 370 A38 38 0 0 0 1039 370 C1039 346 1001 303 Z', gold, 'none') + p('M704 494 H1015', 'none', light, 5),
   liver: p('M672 310 C669 246 713 211 782 221 C840 229 858 244 907 222 C947 203 1000 218 1004 259 C1009 294 977 310 945 318 C905 326 876 348 840 376 C797 410 738 427 699 394 C679 378 671 344 672 310 Z', light) + p('M874 242 C868 286 849 331 807 375', 'none', ink, 7) + c(744, 295, 12, gold) + c(784, 277, 10, gold) + c(757, 340, 11, gold) + c(803, 317, 8, gold) + p('M702 455 H1008', 'none', light, 5),
   hiking: p('M644 429 L769 204 L919 429 Z', '#d6e7dd', 'none') + p('M794 430 L933 235 L1082 430 Z', light, 'none') + p('M742 253 L769 204 L802 253 L778 245 L768 261 Z', paper, 'none') + p('M700 471 C775 424 813 438 845 394 C866 365 870 349 883 330', 'none', gold, 10) + `<g transform="translate(227 91) scale(.74)">${human()}</g>` + p('M935 330 L958 441', 'none', ink, 5),
@@ -27,6 +28,7 @@ const drawings = {
 };
 
 export const covers = [
+  ['hbot-introduction', '高壓氧治療', ['高壓氧治療', '總覽與入門'], '原理・評估・流程・主題導讀', 'chamber'],
   ['glp1-blood-sugar-benefits', '體重管理', ['瘦瘦針', '與血糖管理'], '認識作用・持續追蹤', 'glucose'],
   ['glp1-fatty-liver-benefits', '體重管理', ['瘦瘦針', '與脂肪肝'], '減重之外，還要評估什麼？', 'liver'],
   ['hiking-strength-preparation', '運動傷害', ['爬山之前', '先練好腿'], '上坡推進・下坡控制・穩定', 'hiking'],
@@ -41,6 +43,7 @@ export const covers = [
 
 await fs.mkdir(out, { recursive: true });
 for (const [slug, category, title, caption, drawing] of covers) {
+  if (process.argv[2] && process.argv[2] !== slug) continue;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
     <rect width="1200" height="630" fill="${paper}"/>
     <path d="M639 0 H1200 V630 H985 C1080 494 660 534 639 0" fill="#edf3ef"/>

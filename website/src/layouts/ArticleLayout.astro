@@ -115,6 +115,9 @@ const articleLd = {
     <div class="container container--narrow article__body">
       {showSection && MEDICAL_VISUALS.section === 'before' && <MedicalVisual visual={medical} />}
       <div class="prose">
+        {data.category === 'hyperbaric-oxygen' && article.id !== 'hbot-introduction' && (
+          <p>第一次了解高壓氧？先讀<a href="/articles/hbot-introduction/">高壓氧治療總覽與入門導讀</a>，認識原理、治療流程與注意事項。</p>
+        )}
         <slot />
       </div>
       {showSection && MEDICAL_VISUALS.section === 'after' && <MedicalVisual visual={medical} />}
