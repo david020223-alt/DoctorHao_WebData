@@ -14,6 +14,7 @@ const text = (x, y, value, size = 26, fill = ink, weight = 500) => `<text x="${x
 const oxygen = () => c(1000, 164, 51, paper, ink, 4) + text(966, 179, 'O₂', 43, ink, 700);
 const human = () => c(829, 223, 26, ink) + p('M813 265 L785 330 L840 362 L865 427 M797 300 L878 303 L912 273 M787 331 L745 398 L690 417', 'none', ink, 23);
 const drawings = {
+  volleyball: c(821, 230, 26, ink) + p('M820 271 L820 345 M817 282 L762 248 L745 197 M830 281 L887 243 L913 190 M820 345 L775 402 L737 422 M823 347 L874 385 L906 420', 'none', ink, 20) + c(949, 158, 43, paper, ink, 5) + p('M911 139 Q947 163 979 126 M931 119 Q933 156 980 188 M920 189 Q961 175 958 116', 'none', gold, 5) + p('M1029 231 V470 M974 255 H1091 M974 292 H1091 M974 329 H1091 M993 255 V340 M1067 255 V340', 'none', '#88afaa', 4) + p('M699 471 H994', 'none', gold, 5),
   chamber: rect(661, 246, 382, 172, 78, light) + c(757, 332, 46, paper, ink, 6) + c(912, 332, 46, paper, ink, 6) + text(884, 347, 'O₂', 40, ink, 700) + rect(707, 424, 38, 28, 6, ink, 'none') + rect(960, 424, 38, 28, 6, ink, 'none') + c(852, 191, 42, paper, ink, 6) + p('M852 191 L872 171 M852 235 V245', 'none', ink, 6) + p('M686 475 H1020', 'none', gold, 5),
   glucose: rect(731, 166, 190, 294, 30) + rect(754, 208, 144, 111, 12, light, 'none') + p('M770 270 H794 L806 247 L824 291 L839 259 H881', 'none', ink, 6) + c(827, 394, 19, paper, ink, 5) + p('M1001 303 C1001 303 963 346 963 370 A38 38 0 0 0 1039 370 C1039 346 1001 303 Z', gold, 'none') + p('M704 494 H1015', 'none', light, 5),
   liver: p('M672 310 C669 246 713 211 782 221 C840 229 858 244 907 222 C947 203 1000 218 1004 259 C1009 294 977 310 945 318 C905 326 876 348 840 376 C797 410 738 427 699 394 C679 378 671 344 672 310 Z', light) + p('M874 242 C868 286 849 331 807 375', 'none', ink, 7) + c(744, 295, 12, gold) + c(784, 277, 10, gold) + c(757, 340, 11, gold) + c(803, 317, 8, gold) + p('M702 455 H1008', 'none', light, 5),
@@ -28,6 +29,7 @@ const drawings = {
 };
 
 export const covers = [
+  ['volleyball-injury-prevention', '運動傷害', ['排球運動傷害', '不只有手指'], '落地控制・負荷管理・回場', 'volleyball'],
   ['hbot-introduction', '高壓氧治療', ['高壓氧治療', '總覽與入門'], '原理・評估・流程・主題導讀', 'chamber'],
   ['glp1-blood-sugar-benefits', '體重管理', ['瘦瘦針', '與血糖管理'], '認識作用・持續追蹤', 'glucose'],
   ['glp1-fatty-liver-benefits', '體重管理', ['瘦瘦針', '與脂肪肝'], '減重之外，還要評估什麼？', 'liver'],
