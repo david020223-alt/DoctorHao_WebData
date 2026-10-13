@@ -1,0 +1,31 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+<BaseLayout title="網站閱讀統計與隱私" description="說明本站如何以閱讀統計改善衛教內容，以及如何停用閱讀統計。">
+  <section class="section"><div class="container container--narrow prose">
+    <h1>網站閱讀統計與隱私</h1>
+    <p>為了解哪些衛教內容對讀者有幫助，本站自 2026 年 10 月 13 日起記錄頁面瀏覽、有效停留時間、文章正文捲動進度，以及門診與延伸閱讀連結的點擊次數。</p>
+    <p>有效停留時間只累計網頁位於前景且取得焦點的時間；超過 60 秒沒有操作會暫停，重新操作後繼續。閱讀進度和停留時間只是閱讀投入的參考，無法證明逐字閱讀或理解。</p>
+    <p>來源只分類為搜尋、社群、站內、直接或其他來源，不保存來源完整網址、搜尋字詞、姓名或 IP。本站不以 Cookie 或跨頁識別碼追蹤個人。每次載入頁面的暫時隨機識別碼用來避免重複計算，最長約兩日後於下次收集時清除；每日彙總資料保留約 180 日。</p>
+    <p>統計由本站使用的 Cloudflare 處理，不傳送給廣告平台。Cloudflare 作為網站服務供應商，仍會依其政策處理提供連線及安全防護所需的資料。<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare 隱私政策</a></p>
+    <p>您可以停用本瀏覽器的閱讀統計，亦可透過瀏覽器的 Do Not Track 設定停用。頁尾的既有累計瀏覽計數為獨立功能，不包含閱讀時間或個人身分。</p>
+    <button class="btn" id="reading-toggle" type="button">切換閱讀統計設定</button>
+    <p id="reading-status" role="status"></p>
+  </div></section>
+</BaseLayout>
+<script>
+  const button = document.querySelector<HTMLButtonElement>('#reading-toggle');
+  const status = document.querySelector('#reading-status');
+  function display() {
+    const off = localStorage.getItem('reading-stats-disabled') === '1';
+    if (button) button.textContent = off ? '開啟閱讀統計' : '停用閱讀統計';
+    if (status) status.textContent = off ? '此瀏覽器已停用閱讀統計。' : '閱讀統計已開啟；若瀏覽器啟用 Do Not Track，仍不會收集。';
+  }
+  try {
+    display();
+    button?.addEventListener('click', () => {
+      localStorage.setItem('reading-stats-disabled', localStorage.getItem('reading-stats-disabled') === '1' ? '0' : '1');
+      location.reload();
+    });
+  } catch { if (status) status.textContent = '瀏覽器未允許儲存設定；您可使用 Do Not Track 停用。'; }
+</script>

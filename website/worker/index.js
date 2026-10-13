@@ -1,4 +1,5 @@
 import { DurableObject } from 'cloudflare:workers';
+import { ReadingStore, validSnapshot } from './reading.js';
 
 const apiPath = '/api/visits';
 const automatedAgent = /bot|crawler|spider|slurp|facebookexternalhit|meta-external|headless|lighthouse|pagespeed/i;
@@ -14,10 +15,10 @@ function json(data, status = 200, headers = {}) {
   });
 }
 
-async function readEvent(request) {
+async function readEvent(request, limit = 128) {
   const reader = request.body?.getReader();
   if (!reader) return '';
-  const bytes = new Uint8Array(128);
+  const bytes = new Uint8Array(limit);
   let length = 0;
   for (;;) {
     const { value, done } = await reader.read();
@@ -53,11 +54,46 @@ export class VisitCounter extends DurableObject {
     const row = this.sql.exec('UPDATE visits SET total = total + 1 WHERE id = 1 RETURNING total, started_at').one();
     return { total: row.total, startedAt: row.started_at };
   }
+
+  recordReading(event) {
+    this.reading ??= new ReadingStore(this.ctx.storage);
+    return this.reading.record(event);
+  }
+
+  readingReport(days) {
+    this.reading ??= new ReadingStore(this.ctx.storage);
+    return this.reading.report(days);
+  }
 }
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname === '/api/reading/report') {
+      if (request.method !== 'GET') return json({ error: 'Method not allowed' }, 405);
+      if (!env.READING_REPORT_KEY || request.headers.get('Authorization') !== `Bearer ${env.READING_REPORT_KEY}`) {
+        return json({ error: 'Unauthorized' }, 401, { 'X-Robots-Tag': 'noindex' });
+      }
+      const days = Number(url.searchParams.get('days') ?? 30);
+      if (!Number.isInteger(days) || days < 1 || days > 180) return json({ error: 'Invalid range' }, 400);
+      try {
+        return json(await env.VISIT_COUNTER.get(env.VISIT_COUNTER.idFromName('reading')).readingReport(days), 200, { 'X-Robots-Tag': 'noindex' });
+      } catch { return json({ error: 'Report temporarily unavailable' }, 503); }
+    }
+    if (url.pathname === '/api/reading') {
+      if (request.method !== 'POST') return json({ error: 'Method not allowed' }, 405);
+      if (request.headers.get('Origin') !== url.origin || request.headers.get('Sec-Fetch-Site') === 'cross-site') return json({ error: 'Forbidden' }, 403);
+      if (!request.headers.get('Content-Type')?.startsWith('application/json')) return json({ error: 'Expected JSON' }, 415);
+      if (automatedAgent.test(request.headers.get('User-Agent') ?? '')) return new Response(null, { status: 204 });
+      const body = await readEvent(request, 1024);
+      let event;
+      try { event = JSON.parse(body); } catch { return json({ error: 'Invalid event' }, 400); }
+      if (!validSnapshot(event)) return json({ error: 'Invalid event' }, 400);
+      try {
+        const accepted = await env.VISIT_COUNTER.get(env.VISIT_COUNTER.idFromName('reading')).recordReading(event);
+        return accepted ? new Response(null, { status: 204, headers: { 'Cache-Control': 'no-store' } }) : json({ error: 'Conflicting event' }, 409);
+      } catch { return json({ error: 'Statistics temporarily unavailable' }, 503); }
+    }
     if (url.pathname !== apiPath) return env.ASSETS.fetch(request);
 
     if (request.method !== 'GET' && request.method !== 'POST') {
