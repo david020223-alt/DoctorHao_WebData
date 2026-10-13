@@ -13,6 +13,8 @@ const articles = defineCollection({
       tags: z.array(z.string()).default([]),
       /** 原始社群發布日期（若整理自多篇，取最早或最主要一篇） */
       pubDate: z.coerce.date(),
+      /** 原文日期未能確認時，明示使用網站發布日期。 */
+      pubDateBasis: z.enum(['source', 'website']).default('source'),
       /** 網站最後更新日期 */
       updatedDate: z.coerce.date(),
       /** 原始來源清單 */

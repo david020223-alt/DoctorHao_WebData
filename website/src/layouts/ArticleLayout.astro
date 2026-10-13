@@ -40,7 +40,7 @@ const crumbs = [
 /** 封面優先順序：frontmatter 真實照片 → 生成圖 → 分類幾何封面 */
 const generated = generatedArticleCover(article.id);
 const cover = data.cover ?? generated;
-const coverAlt = data.cover ? (data.coverAlt ?? '') : generated ? `「${data.title}」主題插畫` : '';
+const coverAlt = data.cover ? (data.coverAlt ?? '') : generated ? (data.coverAlt ?? `「${data.title}」主題插畫`) : '';
 
 let ogImage;
 if (cover) {
@@ -87,7 +87,7 @@ const articleLd = {
         <p class="article__lede">{data.description}</p>
         <dl class="article__meta">
           <div><dt>作者</dt><dd>{doctor.displayName}</dd></div>
-          <div><dt>原始發布</dt><dd><time datetime={isoDate(data.pubDate)}>{formatDate(data.pubDate)}</time></dd></div>
+          <div><dt>{data.pubDateBasis === 'website' ? '網站發布' : '原始發布'}</dt><dd><time datetime={isoDate(data.pubDate)}>{formatDate(data.pubDate)}</time></dd></div>
           <div><dt>網站更新</dt><dd><time datetime={isoDate(data.updatedDate)}>{formatDate(data.updatedDate)}</time></dd></div>
           <div><dt>閱讀時間</dt><dd>約 {minutes} 分鐘</dd></div>
         </dl>
